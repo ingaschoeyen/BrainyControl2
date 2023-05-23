@@ -2,7 +2,7 @@
 layout: default
 title: The Cerebellum
 parent: Neural Structures
-nav_order: 2
+nav_order: 3
 ---
 
 ### The Cerebellum
