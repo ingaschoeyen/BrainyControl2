@@ -1,8 +1,8 @@
-title: Just the Docs Template
+title: Brainy Control
 description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://ingaschoeyen.github.io/BrainyControl2/
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Literature: literature.html
