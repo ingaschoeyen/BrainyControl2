@@ -6,3 +6,6 @@ url: https://ingaschoeyen.github.io/BrainyControl2/
 
 aux_links:
   Repository: https://github.com/ingaschoeyen/BrainyControl2
+
+back_to_top: true
+back_to_top_text: "Back to top"
