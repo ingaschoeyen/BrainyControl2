@@ -1,4 +1,3 @@
-<--- Home Page !--->
 ---
 title: Home
 layout: home
