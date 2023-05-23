@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Control Approaches
-parent: Control Theory
+parent: Control Theory Concepts
 nav_order: 2
 ---
 ### What is Control?
