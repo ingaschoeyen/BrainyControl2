@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Resources
-is_parent: true
+has_children: true
 nav_order: 5
 ---
 ### Resources
