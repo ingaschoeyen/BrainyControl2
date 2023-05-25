@@ -5,14 +5,14 @@ parent: Neural Structures
 nav_order: 5
 ---
 
-### The Cerebral Cortex
+# The Cerebral Cortex
 
 ## Frontal Cortex
 
-# M1
+### M1
 
 ## Parietal Cortex
 
-# S1
+### S1
 
 ## Occipital Cortex
