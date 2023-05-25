@@ -5,14 +5,14 @@ parent: Neural Structures
 nav_order: 4
 ---
 
-### Subcortical Structures
+# Subcortical Structures
 
 ## Diencephalon
 
-# Thalamus
+### Thalamus
 
 ## Basal Ganglia
 
-# Striatum
+### Striatum
 
-# Pallidum
+### Pallidum
