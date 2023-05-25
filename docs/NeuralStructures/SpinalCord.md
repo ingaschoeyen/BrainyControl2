@@ -5,7 +5,7 @@ parent: Neural Structures
 nav_order: 1
 ---
 
-### The Spinal Cord
+# The Spinal Cord
 
 ## Cervical Section
 
