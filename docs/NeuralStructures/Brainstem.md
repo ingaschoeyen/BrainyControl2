@@ -21,3 +21,6 @@ nav_order: 2
 
 ## Midbrain
 
+## Tectum
+
+## Tegmentum
