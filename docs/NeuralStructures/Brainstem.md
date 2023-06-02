@@ -5,19 +5,23 @@ parent: Neural Structures
 nav_order: 2
 ---
 
-### The Brainstem
+# The Brainstem
 
 ## Medulla
 
-# Olive
+### Inferior Olive
 
-# Pyramidal Tracts
+
+
+### Pyramidal Tracts
+
+## Reticular Formation
 
 ## Pons
 
-# Sensory Nuclei
+### Sensory Nuclei
 
-# Motor Nuclei
+### Motor Nuclei
 
 ## Midbrain
 
