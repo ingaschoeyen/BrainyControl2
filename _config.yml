@@ -11,4 +11,4 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 logo: "/assets/images/slack_logo2B.png"
-favicon_ico: "/assets/images/slack_logo2B.png"
+favicon_ico: "/assets/images/slack_logo2B.ico"
