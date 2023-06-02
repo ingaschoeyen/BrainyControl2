@@ -11,17 +11,21 @@ nav_order: 2
 
 ### Inferior Olive
 
+#### Principal Nucleus
 
+#### Medial Accessory Nucleus
+
+#### Dorsal Accessory Nucleus
 
 ### Pyramidal Tracts
-
-## Reticular Formation
 
 ## Pons
 
 ### Sensory Nuclei
 
 ### Motor Nuclei
+
+### Pontine Reticular Formation
 
 ## Midbrain
 
