@@ -14,6 +14,8 @@
       }
       .content:hover{
         opacity:1
+        position: relative
+        z-index: -1
       }
       .box{
       }
