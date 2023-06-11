@@ -180,21 +180,6 @@ nav_order: 1
                                           var centerX = parseFloat(viewbox[2]) / 2;
                                           var centerY = parseFloat(viewbox[3]) / 2;
                                           var matrixGroup = svg.getElementById("map_transform");
-                                            
-                                          function zoom_scalar(scale){
-                                            var newScale = "scale(" + scale + ")";
-                                            matrixGroup.setAttributeNS(null, "transform", newScale);
-                                            var sub1 = document.getElementsbyClass('substructure')
-                                            if(scale<1.2){
-                                              for(i=0;i<sub1.length;i++){
-                                                sub1[i].style.opacity = '0';
-                                              }
-                                            }
-                                            elif(scale>=1.2){
-                                              for(i=0;i<sub1.length;i++){
-                                                sub1[i].style.opacity = '.5';
-                                              }
-                                            }
                                    ]]>
                                    </script>
                             </svg>                                                                       
@@ -208,6 +193,24 @@ nav_order: 1
                             </div>
                      </div>
               </div>
+              <script type="text/javascript">
+                     function zoom_scalar(scale){
+                            var newScale = "scale(" + scale + ")";
+                            matrixGroup.setAttributeNS(null, "transform", newScale);
+                            var sub1 = document.getElementsbyClass('substructure')
+                            if(scale<1.2){
+                                for(i=0;i<sub1.length;i++){
+                                  sub1[i].style.opacity = '0';
+                                   }
+                              }
+                            else if(scale>=1.2){
+                                for(i=0;i<sub1.length;i++){
+                                   sub1[i].style.opacity = '.5';
+                                }
+                            }
+                     }
+                     </script> 
+                     
        </body>
 </html>
          
