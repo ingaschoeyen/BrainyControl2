@@ -214,16 +214,16 @@ nav_order: 1
                             var newScale = "scale(" + scale + ")";
                             matrixGroup.setAttributeNS(null, "transform", newScale);
                             var sub1 = document.getElementsByClassName('substructure');
-                            if(scale<1.2){
-                                for(i=0;i<sub1.length;i++){
-                                  sub1[i].style.opacity = '0';
-                                   }
-                              }
-                            else if(scale>=1.2){
-                                for(i=0;i<sub1.length;i++){
-                                   sub1[i].style.opacity = '.5';
-                                }
-                            }
+//                             if(scale<1.2){
+//                                 for(i=0;i<sub1.length;i++){
+//                                   sub1[i].style.opacity = '0';
+//                                    }
+//                               }
+//                             else if(scale>=1.2){
+//                                 for(i=0;i<sub1.length;i++){
+//                                    sub1[i].style.opacity = '.5';
+//                                 }
+//                             }
                      }
                      <!-- from https://codepen.io/Mamboleoo/pen/WzqmoY -->
                      var svg = document.querySelector('map-svg');
