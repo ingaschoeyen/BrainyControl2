@@ -1,3 +1,8 @@
+var svg = document.querySelector('map-svg');
+var input = document.getElementById('map-scale');
+
+input.addEventListener('input', zoom_scalar(this.value));
+
 function zoom_scalar(scale){
     var newScale = "scale(" + scale + ")";
     matrixGroup.setAttributeNS(null, "transform", newScale);
@@ -19,7 +24,7 @@ function zoom_scalar(scale){
     }
 }
 // from https://codepen.io/Mamboleoo/pen/WzqmoY
-var svg = document.querySelector('map-svg');
+
 if (window.PointerEvent) {
   svg.addEventListener('pointerdown', onPointerDown);
   svg.addEventListener('pointerup', onPointerUp); 
