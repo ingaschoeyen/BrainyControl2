@@ -1,4 +1,4 @@
-var svg = document.querySelector('map-svg');
+var svg = document.getElementById('map-svg');
 var input = document.getElementById('map-scale');
 
 input.addEventListener('input', zoom_scalar(this.value));
