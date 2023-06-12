@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   background-color: $sidebar-color;
-  max-width: 350px;
+  max-width: 300px;
 
   @include mq(md) {
     flex-flow: column nowrap;
