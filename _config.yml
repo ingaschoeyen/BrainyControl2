@@ -10,5 +10,5 @@ aux_links:
 back_to_top: true
 back_to_top_text: "Back to top"
 
-logo: "/docs/assets/images/slack_logo2B.png"
-favicon_ico: "/docs/assets/images/slack_logo2B.ico"
+logo: "assets/images/slack_logo2B.png"
+favicon_ico: "assets/images/slack_logo2B.ico"
