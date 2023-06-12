@@ -12,39 +12,44 @@ nav_order: 2
       html,
       body,
       div,
-      #container{
-	width: auto;
-        display: flex;
-        flex-direction: row;
-      },
-      #network{
-        order: 1;
-      },
-      #options{
-        order: 2;
-      	width: auto;
-      },
-      #references{
-    	width: auto;
-      },
-    
-
+	    #container{
+		    width: auto;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: stretch;
+	    },
+	    #network-container{
+		    display: flex;
+		    order:  1;
+		    flex-direction: row
+	    },
+	    #network{
+		    order: 3;
+		    flex-grow: 3;
+	    },
+	    #options{
+		    order: 4;
+		    width: auto;
+		    flex-grow: 1;
+	    },
+	    #references{
+		    order: 2;
+		    width: auto;
+	    }    
     </style>
   </head>
-  <body style="width:auto;">
-    <div id="network">
-    </div>
-    <div id="options">
-      <label class="toggle" for="test">
-        <input type="checkbox" id="test"/>
-              <span class="checkMark">
-                <svg viewBox="0 0 24 24" id="ghq-svg-check" role="presentation" aria-hidden="true">
-                  <path d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1.001 1.001 0 011.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33h-.01z"></path>
-                </svg>
-			  Test Option
-		  </label>
-    </div>
-    <div id="references">
-    </div>
-  </body>
+	<body style="width:auto;">
+		<div id="container">
+			<div id="network-container">
+				<div id="network">
+				</div>
+				<div id="options">
+					<label for="test"> Test Option </label>
+					<input type="checkbox" id="test"/>
+				</div>
+			</div>
+			<div id="references">
+			</div>
+		</div>
+	</body>
 </html>
