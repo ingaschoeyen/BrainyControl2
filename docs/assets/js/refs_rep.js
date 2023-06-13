@@ -48,8 +48,9 @@ async function sort_references(){
 
 async function create_ref_display(){
   var references = await sort_references();
+  var references_div = document.getElementById("references")
   references_div.innerHTML = "";
-  for( const ref_key in sorted_references){
+  for( const ref_key in references){
 //     create ref container
     const ref_div = document.createElement('div');
     ref_div.setAttribute('id', ref_key);
@@ -78,6 +79,7 @@ async function create_ref_display(){
     link.setAttribute('href', references.ref_key.URL)
     link.setAttribute('target', '_blank');
     link.appendChild(document.createTextNode(references.ref_key.DOI));
+    ref_div.appendChild(link);
     ref_div.appendChild(document.createTextNode('\nKeywords:' ));
     let keywords = '';
     for(i=0;i<references.ref_key.keywords.length; i++){
