@@ -19,21 +19,22 @@ async function sort_references(){
   const references = await call_references();
   var referencesArray = Object.entries(references);
   // sort references according to option (default year)
-  if(sort_option.value==="year"){
+  let sort_option_selected = sort_option.options[sort_option.selectedIndex].value;
+  if(sort_option_selected==="year"){
     referenceArray.sort((a, b) => {
       const yearA = a[1]['issued']['dateparts'][0][0];
       const yearB = b[1]['issued']['dateparts'][0][0];
       return yearA - yearB;
     });
   }
-  else if(sort_option.value==="alphabetic"){
+  else if(sort_option_selected==="alphabetic"){
     referencesArray.sort(function(a, b) {
       var uniqueIdA = a[0];
       var uniqueIdB = b[0];
       return uniqueIdA.localeCompare(uniqueIdB);
     });
   }
-  else if(sort_option.value==="structure"){
+  else if(sort_option_selected==="structure"){
     alert("not implemented yet");
     return references;
   }
