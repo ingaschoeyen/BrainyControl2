@@ -1,4 +1,4 @@
-var filepath = "docs/assets/json/References.json";
+var filepath = "../json/References.json";
 var references_div = document.getElementById("references");
 var sort_option = document.getElementById("sort_opt");
 
