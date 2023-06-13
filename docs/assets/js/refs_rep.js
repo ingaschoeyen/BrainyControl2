@@ -46,7 +46,33 @@ async function sort_references(){
 }
 
 async function create_ref_display(){
-  var sorted_references = await sort_references();
-  
+  var references = await sort_references();
+  references_div.innerHTML = "";
+  for( const ref_key in sorted_references){
+//     create ref container
+    const ref_div = document.createElement('div');
+    ref_div.setAttribute('id', ref_key);
+    ref_div.setAttribute('class', 'reference');
+    //     get authors
+    let authors = '';
+    let name = '';
+    if(references.ref_key.authors.length<3){
+      for(i=0;i<references.ref_key.authors.length;i++){
+        name = references.ref_key.authors[i].family + ', ' + references.ref_key.authors[i].given.chatAt(0) + '. ';
+        authors += name;
+      }
+    }
+    else{
+      name = references.ref_key.authors[0].family + ', ' + references.ref_key.authors[0].given.chatAt(0) + '. ';
+      authors = name + ' et al.',
+    }
+    ref_div.appendChild(document.createTextNode(authors));
+//     get year
+    ref_div.appendChild(document.createTextNode(references.ref_key.issued.
+//     get title
+    ref_div.appendChild(document.createTextNode(references.ref_key.title));
+                                                
+    references_div.appendChild(ref_div);
+  }
   
 }
