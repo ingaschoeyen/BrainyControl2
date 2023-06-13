@@ -1,12 +1,13 @@
 var svg = document.querySelector('svg');
 var input = document.getElementById('map-scale');
 
-input.addEventListener('input', zoom_scalar(this.value));
+// input.addEventListener('input', zoom_scalar(this.value));
 
 function zoom_scalar(scale){
-    var newScale = "scale(" + scale + ")";
+    var scale_number = parseFloat(scale);
+    var newScale = "scale(" + scale_number + ")";
     matrixGroup.setAttributeNS(null, "transform", newScale);
-    console.log(scale, typeof scale);
+    console.log(scale_number, typeof scale_number);
     var sub1 = document.getElementsByClassName('substructure');
     if(scale<1.2){
         for(i=0;i<sub1.length;i++){
