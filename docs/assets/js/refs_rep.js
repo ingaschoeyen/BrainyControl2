@@ -19,7 +19,7 @@ async function sort_references(){
   const references = await call_references();
   var referencesArray = Object.entries(references);
   // sort references according to option (default year)
-  let sort_option_selected = sort_option.options[sort_option.selectedIndex].value;
+  let sort_option_selected = document.getElementById('sort_opt').value;
   if(sort_option_selected==="year"){
     referenceArray.sort((a, b) => {
       const yearA = a[1]['issued']['dateparts'][0][0];
