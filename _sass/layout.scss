@@ -39,7 +39,11 @@
     // stylelint-enable function-name-case
   }
 }
-
+@media (min-width: 75rem)
+  .main {
+    margin-left: 400px;
+    min-width: 850px;
+  }
 .main-content-wrap {
   @include container;
 
