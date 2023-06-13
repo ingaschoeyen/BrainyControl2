@@ -64,7 +64,7 @@ async function create_ref_display(){
     }
     else{
       name = references.ref_key.author[0].family + ', ' + references.ref_key.author[0].given.chatAt(0) + '. ';
-      authors = name + ' et al.',
+      authors = name + ' et al.';
     }
     ref_div.appendChild(document.createTextNode(authors));
 //     get year
