@@ -6,6 +6,7 @@ input.addEventListener('input', zoom_scalar(this.value));
 function zoom_scalar(scale){
     var newScale = "scale(" + scale + ")";
     matrixGroup.setAttributeNS(null, "transform", newScale);
+    console.log(scale, typeof scale);
     var sub1 = document.getElementsByClassName('substructure');
     if(scale<1.2){
         for(i=0;i<sub1.length;i++){
