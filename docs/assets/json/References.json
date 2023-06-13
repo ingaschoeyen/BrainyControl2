@@ -1,4 +1,4 @@
-	{
+[	{
 		"herz2022":{
 		"id": "http://zotero.org/users/10586214/items/FGJRLIJS",
 		"type": "article-journal",
@@ -6917,15 +6917,6 @@
 					"given": "M.-C."
 				}
 			],
-			"accessed": {
-				"date-parts": [
-					[
-						"2023",
-						6,
-						8
-					]
-				]
-			},
 			"issued": {
 				"date-parts": [
 					[
@@ -7928,5 +7919,48 @@
 				]
 			},
 			"keywords":["cerebellum", "internal model", "adaptive", "filter"," function", "review"]
+		},
+		"dean2014":{
+			"id": "http://zotero.org/users/10586214/items/AF9TXSS7",
+			"type": "chapter",
+			"abstract": "Many cerebellar models use a form of synaptic plasticity that implements decorrelation learning. Parallel fibers carrying signals positively correlated with climbing-fiber input have their synapses weakened (long-term depression), whereas those carrying signals negatively correlated with climbing input have their synapses strengthened (long-term potentiation). Learning therefore ceases when all parallel-fiber signals have been decorrelated from climbing-fiber input. This is a computationally powerful rule for supervised learning and can be cast in a spike-timing dependent plasticity form for comparison with experimental evidence. Decorrelation learning is particularly well suited to sensory prediction, for example, in the reafference problem where external sensory signals are interfered with by reafferent signals from the organism’s own movements, and the required circuit appears similar to the one found to mediate classical eye blink conditioning. However, for certain stimuli, avoidance is a much better option than simple prediction, and decorrelation learning can also be used to acquire appropriate avoidance movements. One example of a stimulus to be avoided is retinal slip that degrades visual processing, and decorrelation learning appears to play a role in the vestibulo-ocular reflex that stabilizes gaze in the face of unpredicted head movements. Decorrelation learning is thus suitable for both sensory prediction and motor control. It may also be well suited for generic spatial and temporal coordination, because of its ability to remove the unwanted side effects of movement. Finally, because it can be used with any kind of time-varying signal, the cerebellum could play a role in cognitive processing.",
+			"collection-title": "Cerebellar Learning",
+			"container-title": "Progress in Brain Research",
+			"language": "en",
+			"note": "DOI: 10.1016/B978-0-444-63356-9.00007-8",
+			"page": "157-192",
+			"publisher": "Elsevier",
+			"source": "ScienceDirect",
+			"title": "Chapter 7 - Decorrelation Learning in the Cerebellum: Computational Analysis and Experimental Questions",
+			"title-short": "Chapter 7 - Decorrelation Learning in the Cerebellum",
+			"URL": "https://www.sciencedirect.com/science/article/pii/B9780444633569000078",
+			"volume": "210",
+			"author": [
+				{
+					"family": "Dean",
+					"given": "Paul"
+				},
+				{
+					"family": "Porrill",
+					"given": "John"
+				}
+			],
+			"editor": [
+				{
+					"family": "Ramnani",
+					"given": "Narender"
+				}
+			],
+			"issued": {
+				"date-parts": [
+					[
+						"2014",
+						1,
+						1
+					]
+				]
+			},
+			"keywords":["adaptive", "filter", "cerebellum", "chapter", "aversive motivation"]
 		}
 	}
+]
