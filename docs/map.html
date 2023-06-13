@@ -6,8 +6,8 @@ nav_order: 1
 <!DOCTYPE html>
 <html lang="en">
        <head>
-              <title>Motor Control Map</title>
               <style type="text/css">
+                     
                      #colum-container{
                             display: flex;
                             flex-flow: column;
@@ -89,10 +89,13 @@ nav_order: 1
                                         id="map_svg">
                                      <script src="assets/js/anat_info.js"></script>
                                    <style type="text/css">  
-                                                 .content{
-                                                     opacity:0.3
-                                                 }
-                                                 .content:hover{
+                                          #map-svg{
+                                                 cursor:move;
+                                          }
+                                          .content{
+                                                 opacity:0.3
+                                          }
+                                          .content:hover{
                                                          opacity:1;
                                                          position: absolute;
                                                          z-index:100;
