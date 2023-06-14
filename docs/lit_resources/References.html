@@ -23,10 +23,10 @@ nav_order: 3
       }
     </style>
   </head>
-  <body onload="create_ref_display()">
+  <body onload="load_refs()">
     <h1> References</h1>
     <label for="sort-op">Select Sort Option </label>
-    <select id="sort_opt" onchange="create_ref_display()">
+    <select id="sort_opt" onchange="load_refs()">
       <option disabled> Choose a Sort Option</option>
       <option value="year" selected>By Year</option>
       <option value="alphabetic">By Name</option>
@@ -35,5 +35,11 @@ nav_order: 3
     <div id="references-container">
     </div>
     <script src="../assets/js/refs_rep.js"></script>
+    <script type="text/javascript">
+      function load_refs(){
+        document.getElementById('references-container').innerHTML = "";
+        create_ref_display();
+        }
+    </script>
   </body>
 </html>
