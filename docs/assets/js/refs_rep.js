@@ -58,7 +58,7 @@ async function create_ref_display(){
     let authors = [];
     let name = '';
     let author_length = '';
-    references.ref_key.author.forEach((element, index)=>{
+    references[ref_key].author.forEach((element, index)=>{
       let author = element.family + ', ' + element.given.charAt(0) + '. ';
       authors[index] = author;
     });
@@ -77,7 +77,7 @@ async function create_ref_display(){
     console.log('authors' + authors);
     ref_div.appendChild(document.createTextNode(name));
 //     get year
-    ref_div.appendChild(document.createTextNode(references.ref_key.issued['date-parts'][0][0]));
+    ref_div.appendChild(document.createTextNode(references[ref_key].issued['date-parts'][0][0]));
 //     get title
     ref_div.appendChild(document.createTextNode(references.ref_key.title));
     ref_div.appendChild(document.createTextNode('\nauthors:'));
@@ -91,9 +91,9 @@ async function create_ref_display(){
     ref_div.appendChild(link);
     ref_div.appendChild(document.createTextNode('\nKeywords:' ));
     let keywords = '';
-    for(i=0;i<references.ref_key.keywords.length; i++){
-      keywords += references.ref_key.keywords[i];
-      if(i<(references.ref_key.keywords.length-1)){
+    for(i=0;i<references[ref_key].keywords.length; i++){
+      keywords += references[ref_key].keywords[i];
+      if(i<(references[ref_key].keywords.length-1)){
         keywords += ', ';
       }
     }
