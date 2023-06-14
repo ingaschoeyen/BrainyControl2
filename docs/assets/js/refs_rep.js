@@ -17,14 +17,12 @@ async function call_references(){
 
 async function sort_references(){
   const references = await call_references();
-  // var referencesArray = Object.entries(references);
+  var referencesArray = Object.entries(references);
   // sort references according to option (default year)
   let sort_option_selected = document.getElementById('sort_opt').value;
   if(sort_option_selected==="year"){
-    references.sort(function(a, b){
-      const yearA = a.issued['dateparts'][0][0];
-      const yearB = b.issued['dateparts'][0][0];
-      return yearA - yearB;
+    referencesArray.sort(function(a, b){
+       return  b.year - a.year;
     });
   }
   else if(sort_option_selected==="alphabetic"){
