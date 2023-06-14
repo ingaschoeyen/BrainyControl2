@@ -15,6 +15,7 @@ async function call_references(){
 
 async function sort_references(){
   const references = await call_references();
+  console.log('references queried');
   var referencesArray = Object.entries(references);
   // sort references according to option (default year)
   let sort_option_selected = document.getElementById('sort_opt').value;
