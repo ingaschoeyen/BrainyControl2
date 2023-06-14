@@ -53,27 +53,33 @@ function create_ref_display(){
     ref_div.setAttribute('id', ref_key);
     ref_div.setAttribute('class', 'reference');
     //     get authors
-    let authors = '';
+    let authors = [];
     let name = '';
     let author_length = '';
-    references.ref_key.author.forEach(()=>{
-      
+    references.ref_key.author.forEach((element, index)=>{
+      let author = element.family + ', ' + element.given.charAt(0) + '. ';
+      authors[index] = author;
     });
-    if(author_length <= 3){
-      for(i=0;i<author_length;i++){
-        name = references.ref_key.author[i].family + ', ' + references.ref_key.author[i].given.chatAt(0) + '. ';
-        authors += name;
+    if(authors.length <= 3){
+      for(i=0;i<authors.length;i++){
+        name += authors[i];
+        if(i<(authors.length-1)){
+          name += ', ';
+        }
       }
     }
     else{
-      name = references.ref_key.author.family + ', ' + references.ref_key.author.given.chatAt(0) + '. ';
-      authors = name + ' et al.';
+      name = authors[0] + ' et al.';
     }
-    ref_div.appendChild(document.createTextNode(authors));
+    console.log('name' + name);
+    console.log('authors' + authors);
+    ref_div.appendChild(document.createTextNode(name));
 //     get year
     ref_div.appendChild(document.createTextNode(references.ref_key.issued['date-parts'][0][0]));
 //     get title
     ref_div.appendChild(document.createTextNode(references.ref_key.title));
+    ref_div.appendChild(document.createTextNode('\nauthors:'));
+    ref_div.appendChild(document.createTextNode(authors));
 //     append DOI and Keywords
     ref_div.appendChild(document.createTextNode('\nDOI:' ));
     var link = document.createElement('a');
