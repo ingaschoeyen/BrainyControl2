@@ -44,8 +44,9 @@ async function sort_references(){
   return sorted_references;
 }
 
-function create_ref_display(){
-  var references = sort_references();
+async function create_ref_display(){
+  var references = await sort_references();
+  console.log('sorted references received');
   var references_div = document.getElementById("references")
   for( const ref_key in references){
 //     create ref container
