@@ -21,7 +21,9 @@ async function sort_references(){
   let sort_option_selected = document.getElementById('sort_opt').value;
   if(sort_option_selected==="year"){
     referencesArray.sort(function(a, b){
-       return  a.year - b.year;
+      var referenceA = a[1];
+      var referenceB = b[1];
+      return referenceA.year - referenceB.year;
     });
   }
   else if(sort_option_selected==="alphabetic"){
