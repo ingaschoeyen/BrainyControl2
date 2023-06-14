@@ -59,21 +59,39 @@ async function create_ref_display(){
     //     get authors
     let authors = [];
     let name = '';
-    let author_length = '';
-    references[ref_key].author.forEach((element, index)=>{
-      let author = element.family + ', ' + element.given.charAt(0) + '. ';
-      authors[index] = author;
-    });
-    if(authors.length <= 3){
-      for(i=0;i<authors.length;i++){
-        name += authors[i];
-        if(i<(authors.length-1)){
-          name += ', ';
+    if('author' in references[ref_key]){
+      references[ref_key].author.forEach((element, index)=>{
+        let author = element.family + ', ' + element.given.charAt(0) + '. ';
+        authors[index] = author;
+      });
+      if(authors.length <= 3){
+        for(i=0;i<authors.length;i++){
+          name += authors[i];
+          if(i<(authors.length-1)){
+            name += ', ';
+          }
         }
+      }
+      else{
+        name = authors[0] + ' et al.';
       }
     }
     else{
-      name = authors[0] + ' et al.';
+      references[ref_key].editor.forEach((element, index)=>{
+        let author = element.family + ', ' + element.given.charAt(0) + '. ';
+        authors[index] = author;
+      });
+      if(authors.length <= 3){
+        for(i=0;i<authors.length;i++){
+          name += authors[i];
+          if(i<(authors.length-1)){
+            name += ', ';
+          }
+        }
+      }
+      else{
+        name = authors[0] + ' et al.';
+      }
     }
     console.log('name' + name);
     console.log('authors' + authors);
