@@ -79,18 +79,21 @@ async function create_ref_display(){
     console.log('authors' + authors);
     ref_div.appendChild(document.createTextNode(name));
 //     get year
-    ref_div.appendChild(document.createTextNode(references[ref_key].issued['date-parts'][0][0]));
+    ref_div.appendChild(document.createTextNode(' ('+references[ref_key].issued['date-parts'][0][0] + ') '));
 //     get title
     ref_div.appendChild(document.createTextNode(references[ref_key].title));
-    ref_div.appendChild(document.createTextNode('\nauthors:'));
+    ref_div.appendChild(document.createElement('br'));
+    ref_div.appendChild(document.createTextNode('Authors:'));
     ref_div.appendChild(document.createTextNode(authors));
 //     append DOI and Keywords
+    ref_div.appendChild(document.createElement('br'));
     ref_div.appendChild(document.createTextNode('\nDOI:' ));
     var link = document.createElement('a');
     link.setAttribute('href', references[ref_key].URL)
     link.setAttribute('target', '_blank');
     link.appendChild(document.createTextNode(references[ref_key].DOI));
     ref_div.appendChild(link);
+    ref_div.appendChild(document.createElement('br'));
     ref_div.appendChild(document.createTextNode('\nKeywords:' ));
     let keywords = '';
     for(i=0;i<references[ref_key].keywords.length; i++){
@@ -100,6 +103,7 @@ async function create_ref_display(){
       }
     }
     ref_div.appendChild(document.createTextNode(keywords));
+    ref_div.setAttribute('style', 'padding-block:10px;')
     references_div.appendChild(ref_div);
   }
   
