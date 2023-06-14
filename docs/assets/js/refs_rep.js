@@ -39,7 +39,7 @@ async function sort_references(){
     return references;
   }
   const sorted_references = Object.fromEntries(referencesArray);
-  console.log(referencesArray[5][0]);
+  console.log(sorted_references);
   return sorted_references;
 }
 
