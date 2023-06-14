@@ -48,14 +48,16 @@ async function create_ref_display(){
   var references_div = document.getElementById("references")
   for( const ref_key in references){
 //     create ref container
+    console.log(ref_key + 'loop');
     const ref_div = document.createElement('div');
     ref_div.setAttribute('id', ref_key);
     ref_div.setAttribute('class', 'reference');
     //     get authors
     let authors = '';
     let name = '';
-    if(references.ref_key.author.length <= 3){
-      for(i=0;i<references.ref_key.author.length;i++){
+    let author_length = references.ref_key.author.length;
+    if(author_length <= 3){
+      for(i=0;i<author_length;i++){
         name = references.ref_key.author[i].family + ', ' + references.ref_key.author[i].given.chatAt(0) + '. ';
         authors += name;
       }
