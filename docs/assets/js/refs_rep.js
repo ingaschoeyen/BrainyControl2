@@ -20,7 +20,7 @@ async function sort_references(){
   let sort_option_selected = document.getElementById('sort_opt').value;
   if(sort_option_selected==="year"){
     referencesArray.sort(function(a, b){
-       return  b.year - a.year;
+       return  a.year - b.year;
     });
   }
   else if(sort_option_selected==="alphabetic"){
@@ -54,14 +54,14 @@ async function create_ref_display(){
     //     get authors
     let authors = '';
     let name = '';
-    if(references.ref_key.author.length<3){
+    if(references.ref_key.author.length <= 3){
       for(i=0;i<references.ref_key.author.length;i++){
         name = references.ref_key.author[i].family + ', ' + references.ref_key.author[i].given.chatAt(0) + '. ';
         authors += name;
       }
     }
     else{
-      name = references.ref_key.author[0].family + ', ' + references.ref_key.author[0].given.chatAt(0) + '. ';
+      name = references.ref_key.author.family + ', ' + references.ref_key.author.given.chatAt(0) + '. ';
       authors = name + ' et al.';
     }
     ref_div.appendChild(document.createTextNode(authors));
