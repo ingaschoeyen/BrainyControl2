@@ -1,6 +1,4 @@
 var filepath = "../assets/json/References.json";
-var references_div = document.getElementById("references");
-var sort_option = document.getElementById("sort_opt");
 
 async function call_references(){ 
   try {
