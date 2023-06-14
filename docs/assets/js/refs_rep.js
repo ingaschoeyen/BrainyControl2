@@ -23,7 +23,7 @@ async function sort_references(){
     referencesArray.sort(function(a, b){
       var referenceA = a[1];
       var referenceB = b[1];
-      return referenceA.year - referenceB.year;
+      return referenceB.year - referenceA.year;
     });
   }
   else if(sort_option_selected==="alphabetic"){
@@ -81,15 +81,15 @@ async function create_ref_display(){
 //     get year
     ref_div.appendChild(document.createTextNode(references[ref_key].issued['date-parts'][0][0]));
 //     get title
-    ref_div.appendChild(document.createTextNode(references.ref_key.title));
+    ref_div.appendChild(document.createTextNode(references[ref_key].title));
     ref_div.appendChild(document.createTextNode('\nauthors:'));
     ref_div.appendChild(document.createTextNode(authors));
 //     append DOI and Keywords
     ref_div.appendChild(document.createTextNode('\nDOI:' ));
     var link = document.createElement('a');
-    link.setAttribute('href', references.ref_key.URL)
+    link.setAttribute('href', references[ref_key].URL)
     link.setAttribute('target', '_blank');
-    link.appendChild(document.createTextNode(references.ref_key.DOI));
+    link.appendChild(document.createTextNode(references[ref_key].DOI));
     ref_div.appendChild(link);
     ref_div.appendChild(document.createTextNode('\nKeywords:' ));
     let keywords = '';
