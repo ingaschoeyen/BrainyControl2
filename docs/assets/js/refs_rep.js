@@ -43,8 +43,8 @@ async function sort_references(){
   return sorted_references;
 }
 
-async function create_ref_display(){
-  var references = await sort_references();
+function create_ref_display(){
+  var references = sort_references();
   var references_div = document.getElementById("references")
   for( const ref_key in references){
 //     create ref container
@@ -55,7 +55,10 @@ async function create_ref_display(){
     //     get authors
     let authors = '';
     let name = '';
-    let author_length = references.ref_key.author.length;
+    let author_length = '';
+    references.ref_key.author.forEach(()=>{
+      
+    });
     if(author_length <= 3){
       for(i=0;i<author_length;i++){
         name = references.ref_key.author[i].family + ', ' + references.ref_key.author[i].given.chatAt(0) + '. ';
