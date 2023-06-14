@@ -15,12 +15,15 @@ async function call_references(){
 
 async function sort_references(){
   const references = await call_references();
+  console.log('references queried');
   var referencesArray = Object.entries(references);
   // sort references according to option (default year)
   let sort_option_selected = document.getElementById('sort_opt').value;
   if(sort_option_selected==="year"){
     referencesArray.sort(function(a, b){
-       return  a.year - b.year;
+      var referenceA = a[1];
+      var referenceB = b[1];
+      return referenceB.year - referenceA.year;
     });
   }
   else if(sort_option_selected==="alphabetic"){
@@ -45,42 +48,54 @@ async function sort_references(){
 
 async function create_ref_display(){
   var references = await sort_references();
-  var references_div = document.getElementById("references")
+  console.log('sorted references received');
+  var references_div = document.getElementById("references-container");
   for( const ref_key in references){
 //     create ref container
+    console.log(ref_key + 'loop');
     const ref_div = document.createElement('div');
     ref_div.setAttribute('id', ref_key);
     ref_div.setAttribute('class', 'reference');
     //     get authors
-    let authors = '';
+    let authors = [];
     let name = '';
-    if(references.ref_key.author.length <= 3){
-      for(i=0;i<references.ref_key.author.length;i++){
-        name = references.ref_key.author[i].family + ', ' + references.ref_key.author[i].given.chatAt(0) + '. ';
-        authors += name;
+    let author_length = '';
+    references[ref_key].author.forEach((element, index)=>{
+      let author = element.family + ', ' + element.given.charAt(0) + '. ';
+      authors[index] = author;
+    });
+    if(authors.length <= 3){
+      for(i=0;i<authors.length;i++){
+        name += authors[i];
+        if(i<(authors.length-1)){
+          name += ', ';
+        }
       }
     }
     else{
-      name = references.ref_key.author.family + ', ' + references.ref_key.author.given.chatAt(0) + '. ';
-      authors = name + ' et al.';
+      name = authors[0] + ' et al.';
     }
-    ref_div.appendChild(document.createTextNode(authors));
+    console.log('name' + name);
+    console.log('authors' + authors);
+    ref_div.appendChild(document.createTextNode(name));
 //     get year
-    ref_div.appendChild(document.createTextNode(references.ref_key.issued['date-parts'][0][0]));
+    ref_div.appendChild(document.createTextNode(references[ref_key].issued['date-parts'][0][0]));
 //     get title
-    ref_div.appendChild(document.createTextNode(references.ref_key.title));
+    ref_div.appendChild(document.createTextNode(references[ref_key].title));
+    ref_div.appendChild(document.createTextNode('\nauthors:'));
+    ref_div.appendChild(document.createTextNode(authors));
 //     append DOI and Keywords
     ref_div.appendChild(document.createTextNode('\nDOI:' ));
     var link = document.createElement('a');
-    link.setAttribute('href', references.ref_key.URL)
+    link.setAttribute('href', references[ref_key].URL)
     link.setAttribute('target', '_blank');
-    link.appendChild(document.createTextNode(references.ref_key.DOI));
+    link.appendChild(document.createTextNode(references[ref_key].DOI));
     ref_div.appendChild(link);
     ref_div.appendChild(document.createTextNode('\nKeywords:' ));
     let keywords = '';
-    for(i=0;i<references.ref_key.keywords.length; i++){
-      keywords += references.ref_key.keywords[i];
-      if(i<(references.ref_key.keywords.length-1)){
+    for(i=0;i<references[ref_key].keywords.length; i++){
+      keywords += references[ref_key].keywords[i];
+      if(i<(references[ref_key].keywords.length-1)){
         keywords += ', ';
       }
     }
