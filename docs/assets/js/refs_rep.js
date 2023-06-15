@@ -59,8 +59,8 @@ async function create_ref_display(){
     //     get authors
     let authors = [];
     let name = '';
-    if('author' in references[ref_key]){
-      references[ref_key].author.forEach((element, index)=>{
+    if('editor' in references[ref_key]){
+      references[ref_key].editor.forEach((element, index)=>{
         let author = element.family + ', ' + element.given.charAt(0) + '. ';
         authors[index] = author;
       });
@@ -77,7 +77,7 @@ async function create_ref_display(){
       }
     }
     else{
-      references[ref_key].editor.forEach((element, index)=>{
+      references[ref_key].author.forEach((element, index)=>{
         let author = element.family + ', ' + element.given.charAt(0) + '. ';
         authors[index] = author;
       });
@@ -101,7 +101,7 @@ async function create_ref_display(){
 //     get title
     ref_div.appendChild(document.createTextNode(references[ref_key].title));
     ref_div.appendChild(document.createElement('br'));
-    ref_div.appendChild(document.createTextNode('Authors:'));
+    ref_div.appendChild(document.createTextNode('Authors: '));
     ref_div.appendChild(document.createTextNode(authors));
 //     append DOI and Keywords
     ref_div.appendChild(document.createElement('br'));
@@ -112,7 +112,7 @@ async function create_ref_display(){
     link.appendChild(document.createTextNode(references[ref_key].DOI));
     ref_div.appendChild(link);
     ref_div.appendChild(document.createElement('br'));
-    ref_div.appendChild(document.createTextNode('\nKeywords:' ));
+    ref_div.appendChild(document.createTextNode('\nKeywords: ' ));
     let keywords = '';
     for(i=0;i<references[ref_key].keywords.length; i++){
       keywords += references[ref_key].keywords[i];
