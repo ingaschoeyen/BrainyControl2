@@ -6489,7 +6489,8 @@
 						"2020"
 					]
 				]
-			}
+			},
+			"keywords":["m1", "interneurons", "corticospinal", "tms", "inhibition", "neuronal dynamics"]
 		},
 		"bagnall2009":{
 			"year":2009,
