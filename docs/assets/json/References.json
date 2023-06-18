@@ -8134,5 +8134,101 @@
 				]
 			},
 			"keywords":["adaptive", "filter", "cerebellum", "chapter", "aversive motivation"]
+		},
+		"arora2022":{
+			"id": "http://zotero.org/users/10586214/items/8GAD278F",
+			"type": "article",
+			"abstract": "In general, control of movement is considered to be either cortical, spinal, or purely biomechanical and is studied separately at these levels. To achieve this separation when studying a particular level, variations that may be introduced by the other levels are generally either ignored or restricted. This restriction misrepresents the way movements occur in realistic scenarios and limits the ability to model movements in a biologically inspired manner. In this work, we propose a heuristic model for motor control that conceptually and mathematically accounts for the entire motor process, from target to endpoint. It simulates human arm motion and is able to represent functionally different motion properties by flexibly choosing more or less complex motion paths without built-in optimization or joint constraints. With a novel implementation of hierarchical control, this model successfully overcomes the problem of degrees of freedom in robotics. It can serve as a template for neurocomputational work that currently uses control architectures that do not mirror the human motor control process. The model itself also suggests a maximum threshold for delays in position feedback for effective movement, and that the primary role of position feedback in movement is to overcome the effects of environmental perturbations at the joint level. These findings can inform future efforts to develop biologically inspired motor control techniques for prosthetic devices.",
+			"DOI": "10.1101/2022.11.25.517924",
+			"language": "en",
+			"license": "© 2022, Posted by Cold Spring Harbor Laboratory. This pre-print is available under a Creative Commons License (Attribution-NonCommercial-NoDerivs 4.0 International), CC BY-NC-ND 4.0, as described at http://creativecommons.org/licenses/by-nc-nd/4.0/",
+			"note": "page: 2022.11.25.517924\nsection: New Results",
+			"publisher": "bioRxiv",
+			"source": "bioRxiv",
+			"title": "A Simplified Model of Motor Control",
+			"URL": "https://www.biorxiv.org/content/10.1101/2022.11.25.517924v1",
+			"author": [
+				{
+					"family": "Arora",
+					"given": "K."
+				},
+				{
+					"family": "Chakrabarty",
+					"given": "S."
+				}
+			],
+			"accessed": {
+				"date-parts": [
+					[
+						"2023",
+						6,
+						16
+					]
+				]
+			},
+			"issued": {
+				"date-parts": [
+					[
+						"2022",
+						11,
+						26
+					]
+				]
+			},
+			"keywords":["motor control", "upper limb", "modelling", "hierarchichal"]
+		},
+		"trivedi2023":{
+			"id": "http://zotero.org/users/10586214/items/38SA8I2T",
+			"type": "article-journal",
+			"abstract": "In recent years, numerous studies have been conducted to analyze how humans subconsciously optimize various performance criteria while performing a particular task, which has led to the development of robots that are capable of performing tasks with a similar level of efficiency as humans. The complexity of the human body has led researchers to create a framework for robot motion planning to recreate those motions in robotic systems using various redundancy resolution methods. This study conducts a thorough analysis of the relevant literature to provide a detailed exploration of the different redundancy resolution methodologies used in motion generation for mimicking human motion. The studies are investigated and categorized according to the study methodology and various redundancy resolution methods. An examination of the literature revealed a strong trend toward formulating intrinsic strategies that govern human movement through machine learning and artificial intelligence. Subsequently, the paper critically evaluates the existing approaches and highlights their limitations. It also identifies the potential research areas that hold promise for future investigations.",
+			"container-title": "Sensors",
+			"DOI": "10.3390/s23083912",
+			"ISSN": "1424-8220",
+			"issue": "8",
+			"journalAbbreviation": "Sensors",
+			"language": "en",
+			"page": "3912",
+			"source": "Semantic Scholar",
+			"title": "Biomimetic Approaches for Human Arm Motion Generation: Literature Review and Future Directions",
+			"title-short": "Biomimetic Approaches for Human Arm Motion Generation",
+			"URL": "https://www.mdpi.com/1424-8220/23/8/3912",
+			"volume": "23",
+			"author": [
+				{
+					"family": "Trivedi",
+					"given": "Urvish"
+				},
+				{
+					"family": "Menychtas",
+					"given": "Dimitrios"
+				},
+				{
+					"family": "Alqasemi",
+					"given": "Redwan"
+				},
+				{
+					"family": "Dubey",
+					"given": "Rajiv"
+				}
+			],
+			"accessed": {
+				"date-parts": [
+					[
+						"2023",
+						6,
+						16
+					]
+				]
+			},
+			"issued": {
+				"date-parts": [
+					[
+						"2023",
+						4,
+						12
+					]
+				]
+			},
+			"keywords":["upper limb", "motor control", "modelling", "review"]
 		}
 	}
