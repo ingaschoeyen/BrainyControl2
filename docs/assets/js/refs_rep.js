@@ -95,11 +95,16 @@ async function create_ref_display(){
     }
     console.log('name' + name);
     console.log('authors' + authors);
-    ref_div.appendChild(document.createTextNode(name));
+    var ref_title_div = document.createElement('div');
+    var ref_title_id = ref_key + '-title';
+    ref_title_div.setAttribute('class', 'ref_title');
+    ref_title_div.setAttribute('id', ref_title_id);
+    ref_title_div.appendChild(document.createTextNode(name));
 //     get year
-    ref_div.appendChild(document.createTextNode(' ('+references[ref_key].issued['date-parts'][0][0] + ') '));
+    ref_title_div.appendChild(document.createTextNode(' ('+references[ref_key].issued['date-parts'][0][0] + ') '));
 //     get title
-    ref_div.appendChild(document.createTextNode(references[ref_key].title));
+    ref_title_div.appendChild(document.createTextNode(references[ref_key].title));
+    ref_div.appendChild(ref_title_div);
     ref_div.appendChild(document.createElement('br'));
     ref_div.appendChild(document.createTextNode('Authors: '));
     ref_div.appendChild(document.createTextNode(authors));
@@ -107,7 +112,7 @@ async function create_ref_display(){
     ref_div.appendChild(document.createElement('br'));
     ref_div.appendChild(document.createTextNode('\nDOI:' ));
     var link = document.createElement('a');
-    link.setAttribute('href', references[ref_key].URL)
+    link.setAttribute('href', references[ref_key].URL);
     link.setAttribute('target', '_blank');
     link.appendChild(document.createTextNode(references[ref_key].DOI));
     ref_div.appendChild(link);
@@ -126,3 +131,18 @@ async function create_ref_display(){
   }
   
 }
+
+function searchRefs() {
+  var input = document.getElementById("Search");
+  var filter = input.value.toLowerCase();
+  var nodes = document.getElementsByClassName('reference');
+
+  for (i = 0; i < nodes.length; i++) {
+    if (nodes[i].innerText.toLowerCase().includes(filter)) {
+      nodes[i].style.display = "block";
+    } else {
+      nodes[i].style.display = "none";
+    }
+  }
+}
+
