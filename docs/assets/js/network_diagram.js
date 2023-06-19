@@ -97,23 +97,23 @@ function load_network(){
     )
 }
 
-tooltip: {
-    formatter: function () {
-      var info = "";
-      switch (this.color) {
-        case dirDist50:
-          console.log(dirDist50);
-          info = "is an aiport <b>more than 50</b> direct distinations";
-          break;
-        case dirDist10:
-          console.log(dirDist10);
-          info = "is an aiport <b>more than 10</b> direct distinations";
-          break;
-        case dirDistLess10:
-          console.log(dirDistLess10);
-          info = "is an aiport <b>less than 10</b> direct distinations";
-          break;
-      }
-      return "<b>" + this.key + "</b>: " + info;
-    }
-}
+// tooltip: {
+//     formatter: function () {
+//       var info = "";
+//       switch (this.color) {
+//         case dirDist50:
+//           console.log(dirDist50);
+//           info = "is an aiport <b>more than 50</b> direct distinations";
+//           break;
+//         case dirDist10:
+//           console.log(dirDist10);
+//           info = "is an aiport <b>more than 10</b> direct distinations";
+//           break;
+//         case dirDistLess10:
+//           console.log(dirDistLess10);
+//           info = "is an aiport <b>less than 10</b> direct distinations";
+//           break;
+//       }
+//       return "<b>" + this.key + "</b>: " + info;
+//     }
+// }
