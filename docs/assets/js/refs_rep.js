@@ -53,7 +53,6 @@ async function create_ref_display(){
   console.log("new function at work");
   for( const ref_key in references){
 //     create ref container
-    console.log(ref_key + 'loop');
     const ref_div = document.createElement('div');
     ref_div.setAttribute('id', ref_key);
     ref_div.setAttribute('class', 'reference');
