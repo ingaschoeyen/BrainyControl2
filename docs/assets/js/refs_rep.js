@@ -106,7 +106,6 @@ async function create_ref_display(){
     ref_div.appendChild(ref_title_div);
     
     let ref_cont_div = document.createElement('div');
-    ref_cont_div.appendChild(document.createElement('br'));
     ref_cont_div.appendChild(document.createTextNode('Authors: '));
     ref_cont_div.appendChild(document.createTextNode(authors));
 //     append DOI and Keywords
