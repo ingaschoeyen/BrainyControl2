@@ -94,8 +94,6 @@ async function create_ref_display(){
         name = authors[0] + ' et al.';
       }
     }
-    console.log('name' + name);
-    console.log('authors' + authors);
     var ref_title_div = document.createElement('div');
     var ref_title_id = ref_key + '-title';
     ref_title_div.setAttribute('class', 'ref_title');
