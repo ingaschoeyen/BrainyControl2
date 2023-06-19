@@ -8230,5 +8230,59 @@
 				]
 			},
 			"keywords":["upper limb", "motor control", "modelling", "review"]
+		},
+		"dezeeuw2011":{
+			"id": "http://zotero.org/users/10586214/items/GZXX5L3S",
+			"type": "article-journal",
+			"abstract": "The olivocerebellar system is organized in modules and the cerebellar cortex is organized in Purkinje cell zones with common climbing-fibre inputs.Neurons in the inferior olive are electrotonically coupled, and as a consequence the complex spikes of Purkinje cells have a tendency to occur in synchrony.Neurons in the inferior olive show subthreshold oscillations and as a consequence the complex spikes of Purkinje cells have a tendency to occur rhythmically and to occur at specific time points.Simple spikes can also show spatiotemporal patterns in that they can also occur in synchrony and in short regular patterns, which can be triggered by sensorimotor stimulation.The simple-spike patterns and their intervals result from the intrinsic activity of Purkinje cells and their excitatory and inhibitory synaptic inputs, which are all subject to plastic processes.The impact of complex-spike activity on simple-spike activity can be divided in acute natural impacts, heterosynaptic plasticity and global inhibition, all of which can have an impact on motor behaviour.In many mouse mutants, changes in spatiotemporal patterns of Purkinje cell activity can be correlated with some deficit in motor performance, motor learning or motor consolidation.The cerebellar nuclei are sensitive to synchronous Purkinje cell input.Synchronous Purkinje cell input may result in rebound firing in cerebellar nucleus neurons.The mossy- and climbing-fibre collaterals that impinge on cerebellar nuclei can undergo plasticity that is dependent on Purkinje cell input.",
+			"container-title": "Nature Reviews Neuroscience",
+			"DOI": "10.1038/nrn3011",
+			"ISSN": "1471-0048",
+			"issue": "6",
+			"journalAbbreviation": "Nat Rev Neurosci",
+			"language": "en",
+			"license": "2011 Springer Nature Limited",
+			"note": "number: 6\npublisher: Nature Publishing Group",
+			"page": "327-344",
+			"source": "www.nature.com",
+			"title": "Spatiotemporal firing patterns in the cerebellum",
+			"URL": "https://www.nature.com/articles/nrn3011",
+			"volume": "12",
+			"author": [
+				{
+					"family": "De Zeeuw",
+					"given": "Chris I."
+				},
+				{
+					"family": "Hoebeek",
+					"given": "Freek E."
+				},
+				{
+					"family": "Bosman",
+					"given": "Laurens W. J."
+				},
+				{
+					"family": "Schonewille",
+					"given": "Martijn"
+				},
+				{
+					"family": "Witter",
+					"given": "Laurens"
+				},
+				{
+					"family": "Koekkoek",
+					"given": "Sebastiaan K."
+				}
+			],
+			"issued": {
+				"date-parts": [
+					[
+						"2011",
+						6
+					]
+				]
+			},
+			"keywords":["cerebellum", "climbing fiber", "timing", "review"]
 		}
+
 	}

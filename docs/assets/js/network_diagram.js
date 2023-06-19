@@ -22,7 +22,7 @@ async function query_refs(){
 function sort_nodes(){
     let sorted_nodes = [];
     let formatted_nodes = [];
-    let refs = await query_refs();
+    let refs = query_refs();
     // get list of unique keywords, but exclude specific keywords
     let keyword_list = [];
     let excluded_keywords = ["review", "chapter", "textbook"];
