@@ -29,4 +29,4 @@ permalink: /docs/NeuralStructures
 
 ## Unresolved Questions
 
-[^1][Apps (2005)]
+[^1]: Reference
