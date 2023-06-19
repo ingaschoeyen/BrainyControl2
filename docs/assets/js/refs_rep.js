@@ -50,6 +50,7 @@ async function create_ref_display(){
   var references = await sort_references();
   console.log('sorted references received');
   var references_div = document.getElementById("references-container");
+  console.log("new function at work");
   for( const ref_key in references){
 //     create ref container
     console.log(ref_key + 'loop');
@@ -104,8 +105,9 @@ async function create_ref_display(){
     ref_title_div.appendChild(document.createTextNode(' ('+references[ref_key].issued['date-parts'][0][0] + ') '));
 //     get title
     ref_title_div.appendChild(document.createTextNode(references[ref_key].title));
-    let ref_cont_div = document.createElement('div');
     ref_div.appendChild(ref_title_div);
+    
+    let ref_cont_div = document.createElement('div');
     ref_cont_div.appendChild(document.createElement('br'));
     ref_cont_div.appendChild(document.createTextNode('Authors: '));
     ref_cont_div.appendChild(document.createTextNode(authors));
