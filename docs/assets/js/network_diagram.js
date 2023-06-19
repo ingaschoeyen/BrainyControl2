@@ -3,7 +3,7 @@ var network_div = document.getElementById("network");
 var options_div = document.getElementById("options");
 var references_div = document.getElementById("references");
 
-
+console.log('script loaded');
 
 
 async function query_refs(){
@@ -54,7 +54,7 @@ function sort_nodes(){
 
 function load_network(){
     var network_div = document.getElementById('network');
-
+    console.log('load network called');
     const nodes_out = get_nodes();
     let node_pairs = nodes_out.node_pairs;
     let node_formats = nodes_out.node_format;
