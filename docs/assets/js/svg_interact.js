@@ -1,5 +1,5 @@
 var transformMatrix = [1, 0, 0, 1, 0, 0];
-var svg = document.getElementById('map-svg');
+var svg = document.getElementById('map_svg');
 var viewbox = svg.getAttribute("viewBox").split(" ");
 var centerX = parseFloat(viewbox[2]) / 2;
 var centerY = parseFloat(viewbox[3]) / 2;
