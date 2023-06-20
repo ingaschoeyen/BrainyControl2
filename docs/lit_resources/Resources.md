@@ -3,6 +3,6 @@ layout: default
 title: Resources
 has_children: true
 nav_order: 7
-permalink: /docs/lit_resources
+has_toc: false
 ---
 # Resources
