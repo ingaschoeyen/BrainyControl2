@@ -61,7 +61,7 @@ function create_gloss_display(){
 function searchGloss() {
     var input = document.getElementById("Search");
     var filter = input.value.toLowerCase();
-    var nodes = document.getElementsByClassName('reference');
+    var nodes = document.getElementsByClassName('gloss_item');
   
     for (i = 0; i < nodes.length; i++) {
       if (nodes[i].innerText.toLowerCase().includes(filter)) {
