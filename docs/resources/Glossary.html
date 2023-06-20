@@ -12,13 +12,20 @@ nav_order: 2
       html,
       body,
       #items{
-        width:90%
+        width:auto;
       }
     </style>
   </head>
-  <body>
+  <body onload="load_items">
     <div id="items">
     </div>
+    <script src="../assets/js/glossary.js"></script>
+    <script>
+      function load_items(){
+        document.getElementById('items').innerHTML = "";
+        create_gloss_display();
+        }
+    </script>
   </body>
 </html>
   

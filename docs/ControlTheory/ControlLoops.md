@@ -3,6 +3,7 @@ layout: default
 title: Motor Control Loops
 parent: Control Theory
 nav_order: 3
+has_toc: false
 ---
 
 
@@ -20,4 +21,11 @@ nav_order: 3
 
 ---
 
-# 
+# Overview
+
+# Spinal Motor Loops
+
+
+# Subcortical Motor Loops
+
+# Cortical Motor Loops
